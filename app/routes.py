@@ -183,6 +183,7 @@ def register_routes(app):
             try:
                 msg = Message(
                     subject=f"New Contact Form Message from {name}",
+                    sender=app.config["MAIL_USERNAME"],
                     recipients=[app.config["MAIL_USERNAME"]]
                 )
 
